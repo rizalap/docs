@@ -7,7 +7,13 @@ import otree.settings
 
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+PROJECT_ROOT =os.path.dirname (os.path.abspath(__file__))
 
+STATIC_ROOT=os.path.join(PROJECT_ROOT,'staticfiles')
+STATIC_URL='/static/'
+STATIC_DIRS=(
+    os.path.join (PROJECT_ROOT,'static'),
+             )
 # the environment variable OTREE_PRODUCTION controls whether Django runs in
 # DEBUG mode. If OTREE_PRODUCTION==1, then DEBUG=False
 if environ.get('OTREE_PRODUCTION') not in {None, '', '0'}:
@@ -17,6 +23,11 @@ else:
 
 # don't share this with anybody.
 SECRET_KEY = '$^btcjif1707vdd(06nv7*mz(@hd07&5y*2i7!r^--$*aff6g_'
+
+MIDDLEWARE_CLASSES = (
+    # Simplified static file serving.
+    # https://warehouse.python.org/project/whitenoise/
+)
 
 
 DATABASES = {

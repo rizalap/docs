@@ -1,0 +1,28 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    Survey
+{% endblock %}
+
+{% block content %}
+
+    <p>
+        Please indicate the extent to which you agree or disagree with the following statements .
+
+        1.	Strongly Disagree
+        2.	Disagree
+        3.	Neutral
+        4.	Agree
+        5.	Strongly Agree
+        95.  Decline to answer
+
+    </p>
+
+    {% for field in form %}
+        {% formfield field %}
+    {% endfor %}
+
+    {% next_button %}
+
+{% endblock %}

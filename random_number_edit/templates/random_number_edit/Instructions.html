@@ -1,0 +1,28 @@
+{% extends "global/Page.html" %}
+{% load otree_tags staticfiles %}
+
+{% block title %}
+   Second Task Trial Phase Instruction
+{% endblock %}
+
+{% block content %}
+<div class="instructions well well-lg">
+
+    <h3 class="panel-sub-heading">
+       Trial phase
+    </h3>
+
+    <p>
+        After completing your first task, you will now continue with the second task in which
+        you are paired randomly and anonymously with another participant. First we will provide you with
+        an example and then subsequently you will start the second task in this experiment.
+    <p>
+       One of you will assume the role to be the sender and the co-player will assume the role to be
+       the receiver.Both the sender and the receiver will share {{ Constants.endowment }} lab token. The Sender will decide how much she/he
+       will retain. Then the rest of the endowment will be transferred to the receiver. Prior to making a decision how much to retain, our algorithm will generate
+       a number that determines the proportion of your endowment share. This information is only privately observed by the sender.
+</div>
+
+{% next_button %}
+
+{% endblock %}
