@@ -131,6 +131,62 @@ SESSION_CONFIG_DEFAULTS = {
 
 SESSION_CONFIGS = [
     {
+        'name': 'mynewrandomnumber',
+        'display_name': "Random number on click",
+        'num_demo_participants': 1,
+        'app_sequence': ['random_number1'],
+    },
+    {
+        'name': 'mynewexperiment',
+        'display_name': "November pilot",
+        'num_demo_participants': 2,
+        'app_sequence': ['ball_catch3', 'random_number_edit', 'mydictator_example', 'random_number3', 'mydictator_3',
+                         'random_number2', 'mydictator_2', 'random_number2b', 'mydictator_2b', 'bret_ori',
+                         'survey', 'payment_info'],
+    },
+
+    {
+        'name': 'teststrategymethod',
+        'display_name': "dictator game",
+        'num_demo_participants': 2,
+        'app_sequence': ['random_number2', 'mydictator_2'],
+    },
+
+    {
+        'name': 'ballcatch',
+        'display_name': "catching ball",
+        'num_demo_participants': 2,
+        'app_sequence': ['ball_catch'],
+    },
+    {
+        'name': 'quizfreeze',
+        'display_name': " quiz with error message",
+        'num_demo_participants': 2,
+        'app_sequence': ['quiz'],
+    },
+    {
+        'name': 'myexperimentupdated',
+        'display_name': " Study in Making and Communicating Decision Pilot",
+        'num_demo_participants': 2,
+        'app_sequence': ['real_effort_trial', 'random_number_edit', 'mydictator_example', 'quiz1', 'random_number1',
+                         'mydictator_1', 'random_number2', 'mydictator_2', 'random_number3', 'mydictator_3', 'bret',
+                         'survey', 'payment_info'],
+    },
+    {
+        'name': 'myexperiment_room2',
+        'display_name': " Study in Making and Communicating Decision Pilot II",
+        'num_demo_participants': 2,
+        'app_sequence': ['real_effort_trial', 'random_number1', 'mydictator1', 'quiz1', 'random_number2', 'bret',
+                         'survey', 'payment_info'],
+    },
+    {
+        'name': 'myexperiment_200917',
+        'display_name': " Testing All apps",
+        'num_demo_participants': 2,
+        'app_sequence': ['random_number4', 'mydictator_4', 'bret',
+                         'survey', 'payment_info'],
+    },
+    {
         'name': 'public_goods',
         'display_name': "Public Goods",
         'num_demo_participants': 3,

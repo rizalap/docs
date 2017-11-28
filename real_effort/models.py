@@ -46,6 +46,10 @@ class Constants(BaseConstants):
     players_per_group = None
     num_rounds = 2
 
+
+    instructions_template = 'real_effort/Instructions.html'
+
+
     reference_texts = [
         "Revealed preference",
         "Hex ton satoha egavecen. Loh ta receso minenes da linoyiy xese coreliet ocotine! Senuh asud tu bubo tixorut sola, bo ipacape le rorisin lesiku etutale saseriec niyacin ponim na. Ri arariye senayi esoced behin? Tefid oveve duk mosar rototo buc: Leseri binin nolelar sise etolegus ibosa farare. Desac eno titeda res vab no mes!",

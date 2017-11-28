@@ -4,6 +4,16 @@ from otree.api import Currency as c, currency_range
 from .models import Constants, levenshtein, distance_and_ok
 from django.conf import settings
 
+class Introduction(Page):
+    def vars_for_template(self):
+        intro_text = "real_effort/Instructions.html"
+
+        if self.round_number > 1:
+            intro_text="real_effort/Instructions_2.html"
+
+        return {
+            'introduction': intro_text,
+        }
 
 class Transcribe(Page):
     form_model = models.Player
@@ -55,4 +65,4 @@ class Results(Page):
         return {'table_rows': table_rows}
 
 
-page_sequence = [Transcribe, Results]
+page_sequence = [Introduction, Transcribe, Results]
