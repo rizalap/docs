@@ -42,6 +42,9 @@ class Player(BasePlayer):
     def get_partner_income(self):
         partner = self.get_others_in_group()[0]
         return partner.participant.vars['income1']
+    def get_others_catch(self):
+        other = self.get_others_in_group()[0]
+        return other.session.vars['avgcatch']
 
 
 class Subsession(BaseSubsession):

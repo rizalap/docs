@@ -26,7 +26,7 @@ class Subsession(BaseSubsession):
 
     def before_session_starts(self):
         for player in self.get_players():
-            randnumber_edit = random.randint(1, 10)
+            randnumber_edit = random.randint(1, 4)
             allocation_edit = models.PositiveIntegerField()
             player.participant.vars['randnumber_edit']=randnumber_edit
             player.participant.vars['allocation_edit']=allocation_edit

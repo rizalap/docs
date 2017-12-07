@@ -38,25 +38,30 @@ class Subsession(BaseSubsession):
 
 
 class Group(BaseGroup):
-    pass
+
+    def set_payoff(self):
+        players = self.get_players
+        total_catch=[p.catches for p in players]
+        average=sum(total_catch)/len(players)
+        self.average=round(average,2)
+        self.session.vars['avgcatch'] = self.average
+
 
 
 class Player(BasePlayer):
+
     condition = models.IntegerField()
     prize = models.IntegerField()
     cost = models.IntegerField()
-
     catches = models.IntegerField()
     clicks = models.IntegerField()
     score = models.IntegerField()
     expense = models.IntegerField()
-
+    total_catch = models.IntegerField()
+    average = models.IntegerField()
 
     def set_payoff(self):
         self.payoff = self.score - self.expense
         self.ballcatch = self.catches*1
         self.participant.vars['income1'] = self.payoff
         self.participant.vars['catches1']= self.ballcatch
-
-
-

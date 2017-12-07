@@ -142,6 +142,19 @@ SESSION_CONFIG_DEFAULTS = {
 
 SESSION_CONFIGS = [
     {
+        'name': 'NOVELwexperiment',
+        'display_name': "November pilot REVISED",
+        'num_demo_participants': 2,
+        'app_sequence': ['ball_catch3', 'random_number_edit', 'mydictator_example','quiz1', 'random_number3x', 'mydictator_3x','bret_ori',
+                         'survey', 'payment_info'],
+    },
+    {
+        'name': 'averagetest',
+        'display_name': "average of others",
+        'num_demo_participants': 2,
+        'app_sequence': ['ball_catch4','random_number3','mydictator_3'],
+    },
+    {
         'name': 'mynewrandomnumber',
         'display_name': "Random number on click",
         'num_demo_participants': 1,
@@ -151,8 +164,8 @@ SESSION_CONFIGS = [
         'name': 'mynewexperiment',
         'display_name': "November pilot",
         'num_demo_participants': 2,
-        'app_sequence': ['ball_catch3', 'random_number_edit', 'mydictator_example', 'random_number3', 'mydictator_3',
-                         'random_number2', 'mydictator_2', 'random_number2b', 'mydictator_2b', 'bret_ori',
+        'app_sequence': ['ball_catch4', 'random_number_edit', 'mydictator_example','quiz1', 'random_number3', 'mydictator_3',
+                         'random_number2', 'mydictator_2', 'random_number2b', 'mydictator_2b','random_number2c', 'mydictator_2c','bret_ori',
                          'survey', 'payment_info'],
     },
 
@@ -160,14 +173,14 @@ SESSION_CONFIGS = [
         'name': 'teststrategymethod',
         'display_name': "dictator game",
         'num_demo_participants': 2,
-        'app_sequence': ['random_number2', 'mydictator_2'],
+        'app_sequence': ['random_number_edit', 'mydictator_example'],
     },
 
     {
         'name': 'ballcatch',
         'display_name': "catching ball",
         'num_demo_participants': 2,
-        'app_sequence': ['ball_catch'],
+        'app_sequence': ['ball_catch3'],
     },
     {
         'name': 'quizfreeze',

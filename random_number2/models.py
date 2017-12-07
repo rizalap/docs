@@ -26,7 +26,7 @@ class Subsession(BaseSubsession):
 
     def before_session_starts(self):
         for player in self.get_players():
-            randnumber2 = random.randint(1, 6)
+            randnumber2 = random.randint(1, 10)
             player.participant.vars['randnumber2']=randnumber2
 
 

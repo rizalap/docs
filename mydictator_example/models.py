@@ -19,9 +19,9 @@ class Constants(BaseConstants):
 
 
     # Initial amount allocated to the dictator
-    endowment = c(100)
+    endowment = c(40)
 
-    kept_choices = range (10, 100, 10)
+    kept_choices = range (10, 50, 10)
 
     multiplier=2
     offer_increment = c(10)
@@ -87,35 +87,18 @@ class Group(BaseGroup):
 
     # for strategy method
     response_10 = models.CharField(
-        choices=[None, '10', '20', '30', '40', '50', '60', '70', '80', '90', '100'],
+        choices=[None, '10', '20', '30', '40'],
         widget=widgets.RadioSelectHorizontal(), verbose_name=question(10))
     response_20 = models.CharField(
-        choices=[None, '10', '20', '30', '40', '50', '60', '70', '80', '90', '100'],
+        choices=[None, '10', '20', '30', '40'],
         widget=widgets.RadioSelectHorizontal(), verbose_name=question(20))
     response_30 = models.CharField(
-        choices=[None, '10', '20', '30', '40', '50', '60', '70', '80', '90', '100'],
+        choices=[None, '10', '20', '30', '40'],
         widget=widgets.RadioSelectHorizontal(), verbose_name=question(30))
     response_40 = models.CharField(
-        choices=[None, '10', '20', '30', '40', '50', '60', '70', '80', '90', '100'],
+        choices=[None, '10', '20', '30', '40'],
         widget=widgets.RadioSelectHorizontal(), verbose_name=question(40))
-    response_50 = models.CharField(
-        choices=[None, '10', '20', '30', '40', '50', '60', '70', '80', '90', '100'],
-        widget=widgets.RadioSelectHorizontal(), verbose_name=question(50))
-    response_60 = models.CharField(
-        choices=[None, '10', '20', '30', '40', '50', '60', '70', '80', '90', '100'],
-        widget=widgets.RadioSelectHorizontal(), verbose_name=question(60))
-    response_70 = models.CharField(
-        choices=[None, '10', '20', '30', '40', '50', '60', '70', '80', '90', '100'],
-        widget=widgets.RadioSelectHorizontal(), verbose_name=question(70))
-    response_80 = models.CharField(
-        choices=[None, '10', '20', '30', '40', '50', '60', '70', '80', '90', '100'],
-        widget=widgets.RadioSelectHorizontal(), verbose_name=question(80))
-    response_90 = models.CharField(
-        choices=[None, '10', '20', '30', '40', '50', '60', '70', '80', '90', '100'],
-        widget=widgets.RadioSelectHorizontal(), verbose_name=question(90))
-    response_100 = models.CharField(
-        choices=[None, '10', '20', '30', '40', '50', '60', '70', '80', '90', '100'],
-        widget=widgets.RadioSelectHorizontal(), verbose_name=question(100))
+
 
 
     def set_payoffs(self):

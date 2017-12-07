@@ -278,14 +278,10 @@ class Player(BasePlayer):
 
     religion = models.PositiveIntegerField(
         verbose_name='''
-        How often do you pray every year?
+        How many times have you attended religious services during the past year?
             ''',
         min=0, max=100
     )
-    attitude = models.CharField(
-        choices=['1', '2','3','4','5'],
-        verbose_name='I consider myself to be someone who is reserved',
-        widget=widgets.RadioSelect())
 
     religion1 = models.CharField(
         choices=['Prayer is a regular part of my daily life','I usually pray in times of stress or need but rarely at any other time','I pray only during formal ceremonies','I never pray'],

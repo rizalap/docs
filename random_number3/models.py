@@ -13,7 +13,7 @@ create a random number to be seen by participant
 
 class Constants(BaseConstants):
     name_in_url = 'random_number3'
-    players_per_group = None
+    players_per_group = 2
     num_rounds = 1
     multiplier = 10
     endowment = 100
@@ -26,7 +26,7 @@ class Subsession(BaseSubsession):
 
     def before_session_starts(self):
         for player in self.get_players():
-            randnumber3 = random.randint(1, 7)
+            randnumber3 = random.randint(1, 10)
             player.participant.vars['randnumber3']=randnumber3
 
 
