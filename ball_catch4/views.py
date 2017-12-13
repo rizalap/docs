@@ -28,7 +28,7 @@ class Task(Page):
     def before_next_page(self):
         self.player.set_payoff()
     def after_all_players_arrive(self):
-        self.subsession.in_round()
+        self.subsession.calculating_average()
 
 
 

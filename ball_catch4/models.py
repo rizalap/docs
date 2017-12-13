@@ -21,7 +21,7 @@ class Constants(BaseConstants):
 
 
 class Subsession(BaseSubsession):
-    def before_session_starts(self):
+    def creating_session(self):
         if self.round_number == 1:
             for p in self.get_players():
                 my_prize_and_cost = Constants.prize_and_cost.copy()
@@ -40,7 +40,7 @@ class Subsession(BaseSubsession):
     total_catch = models.IntegerField()
     average = models.IntegerField()
 
-    def in_round(self,roundnumber):
+    def calculating_average(self):
         players = self.get_players()
         self.total_catch=sum([p.catches for p in self.get_players()if p.catches is not None])
         average=(self.total_catch)/len(players)
